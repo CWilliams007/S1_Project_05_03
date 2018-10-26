@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 3
+   
+   Layout Style Sheet for A Soldier's Scrapbook
+   Author: Chad Williams
+   Date:  10.26.18
+   
+   Filename: ss_layout.css
+
+*/
+
+
+/* Article Styles */
+/* Step 4, floats the article to the left of the page and edits the width to make it appear more attractive. */
+article {
+    float: left;
+    width: 384px;
+}
+
+
+
+/* First Line and Drop Cap Styles */
+/* Step 5, the first line of paragraphs are in small caps and their font size is changed. */
+p:first-of-type::first-line {
+    font-size: 1.25em;
+    font-variant: small-caps;
+}
+
+/* Step 6, forces the first letter of the first paragraph to be in a drop cap style. */
+p:first-of-type::first-letter {
+    font-size: 4em;
+    font-family: sans-serif;
+    float: left;
+    line-height: 0.8em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+/* Aside Styles */
+aside {
+    float: left;
+    width: 768px;
+}
+
+
+
+/* Map Styles */
+/* Step 8, centers interactive map and sets width. */
+#battleMap {
+    position: relative;
+    width: 688px;
+    margin: 20px auto;
+}
+
+/* Step 9, displays interactive map as a block and sets width to 100% of content box. */
+#mapImage {
+    display: block;
+    width: 100%;
+}
+
+
+
+/* Interactive Map Styles */
+/* Step 11, using absolute positioning places the markers with the targeted ID attributes atop of the map. */
+#marker1 {
+    position: absolute;
+    top: 220px;
+    left: 340px;
+}
+
+#marker2 {
+    position: absolute;
+    top: 194px;
+    left: 358px;
+}
+
+#marker3 {
+    position: absolute;
+    top: 202px;
+    left: 400px;
+}
+
+#marker4 {
+    position: absolute;
+    top: 217px;
+    left: 452px;
+}
+
+#marker5 {
+    position: absolute;
+    top: 229px;
+    left: 498px;
+}
+
+#marker6 {
+    position: absolute;
+    top: 246px;
+    left: 544px;
+}
+
+/* Map Information Styles */
+/* Step 12, hides the info of each battle from the viewer so it's not displayed directly on the page. */
+div.mapInfo {
+    display: none;
+}
+
+/* Step 13, makes the map truly interactive, when hovering over the links to the battles information is displayed for the viewer. */
+a.battleMarkers:hover+div.mapInfo,
+a.battleMarkers:active+div.mapInfo {
+    display: block;
+}
